@@ -1,5 +1,5 @@
 function move(id,px,dir,pxs){
-    var dfg;
+    var dfg = 21;
     var obj = document.getElementById(id);
     if(obj.style.right != 0){
     var x = obj.style.right.replace("px","");   
@@ -11,7 +11,7 @@ function move(id,px,dir,pxs){
     var saako = true;
     x -= 1; x += 1;
     var y = obj.style.top.replace("px","");
-    kerrat = 0;
+    var kerrat = 0;
     y -= 1; y += 1;
     ala();
     function ala(){
@@ -30,11 +30,12 @@ function move(id,px,dir,pxs){
             x -= 3;
          }}
         if(dir == "left"){
-        if(dfg == 2){
+           if(dfg == 2){
             x -= 3;
-        }else{
+          }
+          else{
             x += 3;
-        }
+          }
         }   
         obj.style.top = y + "px";
         if(dfg == 2){
